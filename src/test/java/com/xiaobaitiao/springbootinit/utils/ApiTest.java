@@ -1,0 +1,63 @@
+package com.xiaobaitiao.springbootinit.utils;
+
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.io.FileUtil;
+import com.xiaobaitiao.springbootinit.utils.entity.Message;
+import com.xiaobaitiao.springbootinit.utils.enums.RoleEnum;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+
+public class ApiTest {
+
+    @Test
+    void getModelList() {
+        System.out.println(MoonshotAiUtils.getModelList());
+    }
+
+    @Test
+    void uploadFile() {
+        System.out.println(MoonshotAiUtils.uploadFile(FileUtil.file("/Users/steven/Desktop/test.pdf")));
+    }
+
+    @Test
+    void getFileList() {
+        System.out.println(MoonshotAiUtils.getFileList());
+    }
+
+    @Test
+    void deleteFile() {
+        System.out.println(MoonshotAiUtils.deleteFile("co17orilnl9coc91noh0"));
+        System.out.println(MoonshotAiUtils.getFileList());
+    }
+
+    @Test
+    void getFileContent() {
+        System.out.println(MoonshotAiUtils.getFileContent("co18sokudu6bc6fqdhhg"));
+    }
+
+    @Test
+    void getFileDetail() {
+        System.out.println(MoonshotAiUtils.getFileDetail("co18sokudu6bc6fqdhhg"));
+    }
+
+    @Test
+    void estimateTokenCount() {
+        List<Message> messages = CollUtil.newArrayList(
+                new Message(RoleEnum.system.name(), "你是kimi AI"),
+                new Message(RoleEnum.user.name(), "hello")
+        );
+        System.out.println(MoonshotAiUtils.estimateTokenCount("moonshot-v1-8k", messages));
+    }
+
+    @Test
+    void chat(){
+        List<Message> messages = CollUtil.newArrayList(
+                new Message(RoleEnum.system.name(), "你是kimi AI"),
+                new Message(RoleEnum.user.name(), "怎么学习 Java")
+        );
+        MoonshotAiUtils.chat("moonshot-v1-8k",messages);
+    }
+
+}
