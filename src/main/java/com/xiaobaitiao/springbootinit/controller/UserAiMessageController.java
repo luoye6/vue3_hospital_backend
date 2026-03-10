@@ -56,9 +56,9 @@ public class UserAiMessageController {
     SparkClient sparkClient = new SparkClient();
 
     {
-        sparkClient.appid = "59b825f2";
-        sparkClient.apiKey = "44857f82f54f8c1a267f6e3c48a053d6";
-        sparkClient.apiSecret = "YzYxYzgzODdkNDE4ZDI3NWNmMDA2YTdm";
+        sparkClient.appid = "xxxxxxxxxxxx";
+        sparkClient.apiKey = "xxxxxxxxxxxx";
+        sparkClient.apiSecret = "xxxxxxxxxxxxxxxxxxx";
     }
 
     // region 增删改查

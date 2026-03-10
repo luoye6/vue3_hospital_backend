@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaobaitiao.springbootinit.mapper.DoctorScheduleMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaobaitiao.springbootinit.model.entity.DoctorSchedule">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="doctorId" column="doctorId" jdbcType="BIGINT"/>
+            <result property="scheduleDate" column="scheduleDate" jdbcType="TIMESTAMP"/>
+            <result property="timeSlot" column="timeSlot" jdbcType="VARCHAR"/>
+            <result property="maxAppointment" column="maxAppointment" jdbcType="INTEGER"/>
+            <result property="alreadyAppointment" column="alreadyAppointment" jdbcType="INTEGER"/>
+            <result property="isEnabled" column="isEnabled" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,doctorId,scheduleDate,
+        timeSlot,maxAppointment,alreadyAppointment,
+        isEnabled,createTime,updateTime,
+        isDelete
+    </sql>
+</mapper>

@@ -28,9 +28,9 @@ public class CodeGenerator {
     public static void main(String[] args) throws TemplateException, IOException {
         // 指定生成参数
         String packageName = "com.xiaobaitiao.springbootinit";
-        String dataName = "用户刷题记录表";
-        String dataKey = "userQuestionRecord";
-        String upperDataKey = "UserQuestionRecord";
+        String dataName = "预约挂号表";
+        String dataKey = "appointment";
+        String upperDataKey = "Appointment";
 
         // 封装生成参数
         Map<String, Object> dataModel = new HashMap<>();

@@ -23,7 +23,7 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test_db_xbt
+    url: jdbc:mysql://localhost:3306/hospital
     username: root
     password: hsp
   # Redis 配置
@@ -70,8 +70,8 @@ wx:
   mp:
     token: xxx
     aesKey: xxx
-    appId: xxx
-    secret: xxx
+    appId: xxxx
+    secret: xxxx
     config-storage:
       http-client-type: HttpClient
       key-prefix: wx

@@ -74,6 +74,10 @@ public class User implements Serializable {
      */
     private BigDecimal balance;
     /**
+     * 身份证
+     */
+    private String identity;
+    /**
      * 用户 AI 剩余可使用次数
      */
     private Integer aiRemainNumber;

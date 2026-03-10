@@ -15,6 +15,7 @@
             <result property="userProfile" column="userProfile" jdbcType="VARCHAR"/>
             <result property="userRole" column="userRole" jdbcType="VARCHAR"/>
         <result property="userPhone" column="userPhone" jdbcType="VARCHAR"/>
+        <result property="identity" column="identity" jdbcType="VARCHAR"/>
         <result property="aiRemainNumber" column="aiRemainNumber" jdbcType="INTEGER"/>
         <result property="balance" column="balance" jdbcType="DECIMAL"/>
             <result property="editTime" column="editTime" jdbcType="TIMESTAMP"/>
@@ -26,7 +27,7 @@
     <sql id="Base_Column_List">
         id,userAccount,userPassword,
         unionId,mpOpenId,userName,
-        userAvatar,userProfile,userRole,userPhone,aiRemainNumber,balance,
+        userAvatar,userProfile,userRole,userPhone,`identity`,aiRemainNumber,balance,
         editTime,createTime,updateTime,
         isDelete
     </sql>

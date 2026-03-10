@@ -102,7 +102,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
             return queryWrapper;
         }
         String searchText = postQueryRequest.getSearchText();
-        String sortField = postQueryRequest.getSortField();
+        String sortField = "createTime";
         String sortOrder = postQueryRequest.getSortOrder();
         Long id = postQueryRequest.getId();
         String title = postQueryRequest.getTitle();
@@ -124,7 +124,7 @@ public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements Po
         queryWrapper.ne(ObjectUtils.isNotEmpty(notId), "id", notId);
         queryWrapper.eq(ObjectUtils.isNotEmpty(id), "id", id);
         queryWrapper.eq(ObjectUtils.isNotEmpty(userId), "userId", userId);
-        queryWrapper.orderBy(SqlUtils.validSortField(sortField), sortOrder.equals(CommonConstant.SORT_ORDER_ASC),
+        queryWrapper.orderBy(SqlUtils.validSortField(sortField), sortOrder.equals(CommonConstant.SORT_ORDER_DESC),
                 sortField);
         return queryWrapper;
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaobaitiao.springbootinit.mapper.DoctorMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaobaitiao.springbootinit.model.entity.Doctor">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="departmentId" column="departmentId" jdbcType="BIGINT"/>
+            <result property="doctorName" column="doctorName" jdbcType="VARCHAR"/>
+            <result property="doctorSex" column="doctorSex" jdbcType="VARCHAR"/>
+            <result property="doctorAvatar" column="doctorAvatar" jdbcType="VARCHAR"/>
+            <result property="doctorTitle" column="doctorTitle" jdbcType="VARCHAR"/>
+            <result property="doctorDescription" column="doctorDescription" jdbcType="VARCHAR"/>
+            <result property="isEnabled" column="isEnabled" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,departmentId,doctorName,
+        doctorSex,doctorAvatar,doctorTitle,
+        doctorDescription,isEnabled,createTime,
+        updateTime,isDelete
+    </sql>
+</mapper>
